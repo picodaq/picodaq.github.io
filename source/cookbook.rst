@@ -1,0 +1,5 @@
+.. _cookbook:
+
+Cookbook recipes
+================
+
