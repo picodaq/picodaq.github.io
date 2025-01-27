@@ -22,3 +22,43 @@ div.sphinxsidebar h3 {
 div.highlight-text pre {
     background: #f4f4f4;
 }
+
+dl.method {
+    margin-top: 20px;
+}
+
+dl.py dl.field-list > dt {
+    padding-left: 0px;
+    margin-bottom: 5px;
+}
+dl.py dl.field-list > dd {
+    margin-bottom: 5px;
+}
+dl.py dl.field-list p {
+    margin-bottom: 2px;
+}
+
+dl.method p.rubric {
+    margin-top: 0px;
+    margin-bottom: 5px;
+}
+
+dl.py p {
+    margin-top: 0px;
+    margin-bottom: 12px;
+}
+
+dl.py>dt {
+    margin-left: 2em;
+    text-indent: -2em;
+    margin-bottom: 10px;
+}
+
+
+dl.field-list {
+    margin-bottom: 7px;
+}
+
+dl.py>dd>p:first-child {
+    font-style: italic;
+}
