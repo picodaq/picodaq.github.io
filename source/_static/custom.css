@@ -1,0 +1,24 @@
+div.sphinxsidebar p.blurb {
+    font-size: 115%;
+    font-style: italic;
+}
+
+table.spec-table tr>td {
+    text-align: center;
+}
+
+div#searchbox {
+    padding-top: 12px;
+}
+
+div.sphinxsidebarwrapper>ul {
+    margin-top: 0px;
+}
+
+div.sphinxsidebar h3 {
+    margin-top: 16px;
+}
+
+div.highlight-text pre {
+    background: #f4f4f4;
+}

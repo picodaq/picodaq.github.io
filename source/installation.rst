@@ -15,6 +15,8 @@ Command line
 
 In Windows, Mac OS, and many versions of Linux, a simple
 
+.. code-block::
+
     pip install picodaq
 
 gets you the latest. This works without restriction in `virtual
@@ -32,16 +34,22 @@ Verifying software installation
 
 Open your favorite Python IDE. Type
 
+.. code-block::
+
     import picodaq
     print(picodaq.version)
     
 Run that code. You should be greeted with a version number, like
+
+.. code-block:: text
 
     "0.1.240124"
 
 If, instead, you receive a ModuleNotFoundError exception, check your
 typing and make sure that the environment used by your IDE includes
 the place where you installed the ``picodaq`` library. It may be helpful to
+
+.. code-block::
 
     import sys
     print(sys.path)

@@ -1,44 +1,52 @@
-.. picoDAQ documentation master file, created by
-   sphinx-quickstart on Fri Jan 24 09:02:09 2025.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
-
+.. _index:
+   
 picoDAQ
 =======
 
-.. rubric:: *Data acquisition, but easy*
-   :class: tagline
-    
+Why should reading from your data acquisition system be any harder
+than reading from a file? With picoDAQ, it isn’t. Reading 10 seconds
+of data from two analog channels into a `NumPy array
+<https:numpy.org>`_ is literally as easy as:
 
+.. code-block::
 
+    with AnalogIn(channels=[0,1], rate=100*kHz) as ai:
+        data = ai.read(10*s)
 
+If you like the sound of that, :ref:`get one of the supported devices
+<supportedhardware>` (don’t worry, very inexpensive options exist),
+:ref:`install the library <installation>`, and :ref:`start acquiring
+data <firstrun>`!
 
-.. toctree::
-   :maxdepth: 2
-   :caption: Contents:
 
 Getting Started
 ---------------
 
+* :ref:`supportedhardware`
 * :ref:`installation`
 * :ref:`firstrun`
 
 
-Cookbook
---------
-
-
-API Reference
+How-To Guides
 -------------
 
+* :ref:`cookbook`
 
 
-Supported Hardware
-------------------
+Reference
+---------
 
-Indices and tables
-------------------
+* :ref:`apiref`
+* :ref:`hwspecs`
 
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
+  
+.. toctree::
+   :maxdepth: 2
+   :hidden:
+
+   supportedhardware
+   installation
+   firstrun
+   cookbook
+   apiref
+   hwspecs

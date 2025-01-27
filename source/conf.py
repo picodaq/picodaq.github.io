@@ -26,3 +26,23 @@ exclude_patterns = []
 
 html_theme = 'alabaster'
 html_static_path = ['_static']
+
+######################################################################
+html_theme_options = {
+    'logo': 'logo.png',
+    'description': 'Data acquisition, but easy',
+    'show_powered_by': False,
+    }
+
+html_sidebars = {
+    '**': [
+        'about.html',
+        'navigation.html',
+        'searchfield.html', # searchbox.html
+        #'relations.html',
+        #'donate.html',
+    ]
+}
+
+html_show_sourcelink = False
+html_show_sphinx = False

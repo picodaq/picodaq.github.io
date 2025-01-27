@@ -1,10 +1,10 @@
 .. _firstrun:
 
-First run
+First Run
 =========
 
 Before anything else, make sure you have :ref:`installed the picodaq
-library <installation>` and that you can `import` it into your Python
+library <installation>` and that you can ``import`` it into your Python
 session.
 
 
@@ -15,12 +15,14 @@ The first step after that is to connect your picoDAQ device to your
 computer with a USB cable. Your computer may take a few moments
 sniffing out its new friend, but pretty soon, the “status” light on
 your picoDAQ should start to slowly blink green, indicating its
-readiness to receive instructions. For this very first test, do not
-attach anything to the picoDAQ’s BNC connectors.
+readiness to receive instructions. If not, check the :ref:`troubleshooting` section below.
 
 
 Acquiring some data
 -------------------
+
+For this very first test, do not attach anything to the picoDAQ’s BNC
+connectors.
 
 Run the following snippet of Python code, either through an IDE or
 directly in the Python prompt:
@@ -38,10 +40,10 @@ directly in the Python prompt:
 
 That will acquire 100 ms of data from channel “ai0”. Since nothing is
 physically connected to that channel, you will only record noise. If
-you put a finger on the shell of connector while recording, you will
-get a much larger signal.
+you put a finger on the shell of the connector while recording, you
+will get a much larger signal.
 
-Today, in my office, the result looks like this:
+Today in my office, the results look like this:
 
 
 .. image:: unconnected.png
@@ -52,14 +54,25 @@ Today, in my office, the result looks like this:
 The horizontal axis is measured in samples, so this trace represents
 100 ms. The vertical axis is in Volts. The blue trace represents the
 first recording, the orange one a recording during which I touched the
-connector to induce additional pickup.
+connector to induce additional pickup. (I ran the ``with .. plot`` part
+of the code twice.)
 
 
 Next steps
 ----------
 
-That is it! If you got this far, your device is up and running and you are off to the races. We have collected a set of `cookbook recipes <cookbook>`_ to demonstrate the use of picoDAQ in different data acquisition scenarios. To delve into the details of the functionality of the ``AnalogIn`` class and its friends, read the `API reference <apiref>`_.
+That is it! If you got this far, your device is up and running and you are off to the races. To guide you on your next steps:
 
+* A set of `Cookbook Recipes <cookbook>`_ demonstrates the use of
+  picoDAQ in different data acquisition scenarios.
+
+* A complete `API Reference <apiref>`_ delves into the full the
+  functionality of the ``AnalogIn`` class and its friends.
+
+* The `Hardware Specifications <hwspecs>`_ of the picoDAQ boards
+  detail the limits of what you can achieve with these devices.
+
+.. _troubleshooting:
 
 Troubleshooting
 ---------------
