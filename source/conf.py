@@ -52,4 +52,8 @@ autodoc_type_aliases = {
     'Iterable': 'Iterable',
     'List': 'List',
     'ArrayLike': 'ArrayLike',
+    'Pulse': 'Pulse',
+    'Time': 'Time',
+    'Voltage': 'Voltage',
+    'Deltas': 'Deltas',
 }

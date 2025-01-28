@@ -3,7 +3,12 @@
 Cookbook Recipes
 ================
  
-Recipes are presented for different scenarios in these categories:
+Recipes are presented for different scenarios. If you are looking for
+something specific, dive right in, as each section can be read
+independently. However, alternative approaches that are common to
+multiple recipes are generally presented in most detail in the
+earliest such recipe. Thus, there is some value in reading the recipes
+in order, especially for new users.
 
 Recording analog signals
 ------------------------

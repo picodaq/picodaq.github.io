@@ -45,4 +45,7 @@ generally used directly outside the library itself:
    api-ao
    api-di
    api-do
-   
+   api-pulse
+   api-train
+   api-series
+   api-units
