@@ -57,3 +57,4 @@ autodoc_type_aliases = {
     'Voltage': 'Voltage',
     'Deltas': 'Deltas',
 }
+autodoc_member_order = 'alphabetical'

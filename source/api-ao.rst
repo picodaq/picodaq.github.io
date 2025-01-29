@@ -5,6 +5,7 @@ AnalogOut
 
 .. autoclass:: picodaq.dac.AnalogOut
    :members:
+   :inherited-members:
    :special-members: __getitem__
 
                      

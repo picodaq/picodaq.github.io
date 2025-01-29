@@ -35,3 +35,11 @@ Implementation details
 
 Time, Frequency and Voltage are implemented as derived classes from a
 general :ref:`Quantity <api-quantity>` class. Most users do not need to use that class directly.
+
+.. toctree::
+   :maxdepth: 3
+   :titlesonly:
+   :hidden:
+
+   api-quantity
+   

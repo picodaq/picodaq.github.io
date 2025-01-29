@@ -5,4 +5,4 @@ AnalogIn
 
 .. autoclass:: picodaq.adc.AnalogIn
    :members:
-  
+   :inherited-members:  

@@ -5,6 +5,7 @@ DigitalOut
 
 .. autoclass:: picodaq.dac.DigitalOut
    :members:
+   :inherited-members:
    :special-members: __getitem__
 
 Specifying stimuli
@@ -24,5 +25,5 @@ below.
      
 .. autoclass:: picodaq.dac.OutRef
    :members:
-      
+   :no-index:    
   

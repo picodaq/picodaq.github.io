@@ -5,4 +5,5 @@ DigitalIn
 
 .. autoclass:: picodaq.adc.DigitalIn
    :members:
-     
+   :inherited-members:
+      
