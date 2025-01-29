@@ -66,3 +66,7 @@ dl.field-list {
 dl.py>dd>p:first-child {
     font-style: italic;
 }
+
+a.current:hover, a.current:visited, a.current:link {
+    color: #aa3322;
+}

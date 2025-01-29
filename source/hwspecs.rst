@@ -30,7 +30,7 @@ Analog input
    * - Max. sustained throughput
      - xxx kS/s
      - xxx kS/s
-   * - Noise
+   * - Broadband noise
      - xxx mV¹⁾
      - yyy mV¹⁾
 

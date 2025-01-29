@@ -13,26 +13,41 @@ in order, especially for new users.
 Recording analog signals
 ------------------------
 
-* :ref:`Recording a single analog signal <analog1>`
-* :ref:`Recording multiple analog signals simultaneously <analog2>`
+* :ref:`Recording a single analog signal <cookbook-a1>`
+* :ref:`Recording multiple analog signals simultaneously <cookbook-a2>`
 
 Recording digital and mixed signals
 -----------------------------------
 
-* :ref:`Recording digital signals <analog2>`  
-* :ref:`Recording analog and digital signals simultaneously <anadig>`
+* :ref:`Recording digital signals <cookbook-dig>`  
+* :ref:`Recording analog and digital signals simultaneously <cookbook-mix>`
 
 Discontinuous recording
 -----------------------
   
-* :ref:`Episodic recording <episodic>`
-* :ref:`Using triggers <triggers>`
+* :ref:`Episodic recording <cookbook-episodic>`
+* :ref:`Using triggers <cookbook-trig>`
 
 Generating output
 -----------------
   
-* :ref:`Using picoDAQ as a function generator <funcoutput1>`
-* :ref:`Nonparametric output <sampleout>`
-* :ref:`Generating multiple outputs synchronously <output2>`
-* :ref:`Combining input and output <inout>`
+* :ref:`Using picoDAQ as a function generator <cookbook-funcoutput1>`
+* :ref:`Nonparametric output <cookbook-sampleout>`
+* :ref:`Generating multiple outputs synchronously <cookbook-output2>`
+
+Combined input and output
+-------------------------
+
+* :ref:`Combining input and output <cookbook-inout>`
+*   Discontinuous output? Episodic/triggered in/out combo? 
   
+.. toctree::
+   :maxdepth: 2
+   :hidden:
+
+   Single analog input <cookbook-a1>
+   Multiple analog inputs <cookbook-a2>
+   Digital inputs <cookbook-dig>
+   Mixed inputs <cookbook-mix>
+   Episodic recording <cookbook-episodic>
+   Using triggers <cookbook-trig>

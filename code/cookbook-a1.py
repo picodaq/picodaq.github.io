@@ -1,60 +1,64 @@
 #!/usr/bin/python3
 
+# There is not a build system that builds the cookbook images
+# automatically, as cloud services tend not to have picoDAQs
+# attached to their VMs yet.
+
 from picodaq import *
 import matplotlib.pyplot as plt
-import inspect
-plt.ion()
-
+from code.cookbookhelper import showall
 
 
 def recipe_a1a():
-    
-    from picodaq import *
+    ##importall
     import matplotlib.pyplot as plt
 
-    with AnalogIn(channel=0, rate=20*kHz) as ai:
-        data = ai.read(10*s)
+    with AnalogIn(channel=0, rate=50*kHz) as ai:
+        data = ai.read(200*ms)
 
     plt.plot(data)
     plt.xlabel('Sample #')
-    plt.ylabel('Channel 0 (V)')
+    plt.ylabel('Voltage (V)')
 
     
 def recipe_a1b():
-
-    with AnalogIn(channel=0, rate=20*kHz) as ai:
-        data, times = ai.read(10*s, times=True)
+    with AnalogIn(channel=0, rate=50*kHz) as ai:
+        data, times = ai.read(200*ms, times=True)
 
     plt.plot(times, data)
     plt.xlabel('Time (s)')
-    plt.ylabel('Channel 0 (V)')
+    plt.ylabel('Voltage (V)')
 
     
     
 def recipe_a1c():
-
-    with AnalogIn(channel=0, rate=20*kHz) as ai:
-        data = ai.read(10*s, raw=True)
+    with AnalogIn(channel=0, rate=50*kHz) as ai:
+        data = ai.read(200*ms, raw=True)
 
     plt.plot(data)
     plt.xlabel('Sample #')
     plt.ylabel('Digital value')
 
-
-
-def showandsave(name, obj):
-    f = plt.figure(figsize=[5, 3])
-    f.clf()
-    obj()
-    if f.axes:
-        f.savefig(f"source/_static/imgs/cookbook/{name}.png")
-    else:
-        f.close()
-    src = inspect.source(obj)
+def recipe_a1d():
+    import numpy as np
     
+    data = []
+    times = []
+    K = 25
+    with AnalogIn(channel=0, rate=50*kHz) as ai:
+        for k in range(K):
+            dat, tms = ai.read(20*ms, times=True)
+            print(f"Progress {k+1}/{K}", end="\r")
+            data.append(dat)
+            times.append(tms)
+    print()
+    data = np.concatenate(data, 0)
+    times = np.concatenate(times, 0)
 
-if __name__ == "__main__":
-    vv = {k:v for k,v in vars().items()}
-    for name, obj in vv.items():
-        if name.startswith("recipe_") and callable(obj):
-            showandsave(name, obj)
+    plt.plot(times, data)
+    plt.xlabel('Time (s)')
+    plt.ylabel('Voltage (V)')
+
+    
+showall(vars())
+    
