@@ -31,14 +31,15 @@ Discontinuous recording
 Generating output
 -----------------
   
-* :ref:`Using picoDAQ as a function generator <cookbook-funcoutput1>`
+* :ref:`PicoDAQ as a pulse generator <cookbook-pulseoutput1>`
+* :ref:`PicoDAQ as a function generator <cookbook-funcoutput1>`
 * :ref:`Nonparametric output <cookbook-sampleout>`
 * :ref:`Generating multiple outputs synchronously <cookbook-output2>`
 
 Combined input and output
 -------------------------
 
-* :ref:`Combining input and output <cookbook-inout>`
+*  Combining input and output cookbook-inout
 *   Discontinuous output? Episodic/triggered in/out combo? 
   
 .. toctree::
@@ -51,3 +52,8 @@ Combined input and output
    Mixed inputs <cookbook-mix>
    Episodic recording <cookbook-episodic>
    Using triggers <cookbook-trig>
+   Pulse output <cookbook-pulseoutput1>
+   Function generator <cookbook-funcoutput1>
+   Sampled output <cookbook-sampleout>
+   Multiple outputs <cookbook-output2>
+   

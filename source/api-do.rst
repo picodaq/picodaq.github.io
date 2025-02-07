@@ -1,5 +1,8 @@
 .. _api-do:
 
+.. contents::
+      
+
 DigitalOut
 ==========
 
@@ -8,8 +11,9 @@ DigitalOut
    :inherited-members:
    :special-members: __getitem__
 
+                     
 Specifying stimuli
-------------------
+==================
 
 To specify stimuli for a given output channel, use indexing syntax on
 a `DigitalOut` object (i.e., something like ``do[1]``), then use the

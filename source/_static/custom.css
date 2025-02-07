@@ -23,11 +23,11 @@ div.highlight-text pre {
     background: #f4f4f4;
 }
 
-dl.method {
+dl.py.method, dl.py.property {
     margin-top: 20px;
 }
 
-dl.py.class, dl.py.data {
+dl.py.class, dl.py.data, dl.py.function {
     margin-top: 30px;
 }
 
