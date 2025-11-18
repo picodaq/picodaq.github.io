@@ -22,7 +22,7 @@ connected to the input:
 Retrieving timestamps
 ---------------------
            
-The *read* function can also return timestamps along with your data:
+The ``read(...)`` function can also return timestamps along with your data:
 
 .. literalinclude :: _static/code/cookbook/recipe_a1b.py
 
@@ -33,7 +33,7 @@ The *read* function can also return timestamps along with your data:
 Of course, you could have reconstructed the timestamps yourself using
 something like:
 
-.. codeblock::
+.. code-block ::
 
    times = np.arange(len(data)) / 50000
 
@@ -44,8 +44,8 @@ Reading more data
 -----------------
 
 It is certainly possible to read a larger quantity of data with a
-single call to *read*, but you may want to do some online processing
-or show a progress bar.
+single call to ``read(...)``, but you may want to do some online
+processing or show a progress bar.
 
 .. literalinclude :: _static/code/cookbook/recipe_a1d.py
 
@@ -59,7 +59,7 @@ Notice that the timestamps do not restart from zero in each read frame.
 Retrieving raw binary data
 --------------------------
 
-On occasion, mostly for debugging purposes, it may be useful to
+On occasion, e.g. for debugging purposes, it may be useful to
 retrieve raw binary data.
 
 .. literalinclude :: _static/code/cookbook/recipe_a1c.py

@@ -18,8 +18,8 @@ matplotlib:
 
 (The “TTL” output from my cheap function generator isn’t very clean.)
 
-The resulting ``data`` is a T×C array where T is the sample count and
-C is the number of channels.
+The resulting ``data`` is a `T` × `C` array where `T` is the sample count and
+`C` is the number of channels.
 
 
 Retrieving time stamps
@@ -32,7 +32,7 @@ Retrieving time stamps
    :align: center
 
 
-The ``times`` return value is still a simple T-vector.
+The ``times`` return value is still a simple `T`-vector.
 
 
 Retrieving raw data
@@ -45,7 +45,7 @@ Retrieving raw data from multiple channels is equally straightforward:
     with AnalogIn(channels=[0, 1], rate=50*kHz) as ai:
         data = ai.read(200*ms, raw=True)
 
-The result is a T×C array of 16-bit integers.
+The result is a `T` × `C` array of 16-bit integers.
 
 
 Edge cases
@@ -58,15 +58,15 @@ It is perfectly legitimate to record a single channel in this way:
     with AnalogIn(channels=[0], rate=50*kHz) as ai:
         data = ai.read(200*ms)
 
-The result is a T×1 array. In contrast, if you record a single channel
-with
+The result is a `T` × 1 array. In contrast, if you record a single
+channel with
 
 .. code-block::
 
     with AnalogIn(channel=0, rate=50*kHz) as ai:
         data = ai.read(200*ms)
 
-the result is a T-vector.
+the result is a `T`-vector.
 
 It is even OK to record from no channels at all:
 
@@ -75,6 +75,7 @@ It is even OK to record from no channels at all:
     with AnalogIn(channels=[], rate=50*kHz) as ai:
         data = ai.read(200*ms)
 
-The result is a T×0 array. This behavior is mostly useful if your use
-of AnalogIn is embedded in a function that receives its *channels*
-parameter from an external source.
+That takes 200 ms and results in a `T` × 0 array. This behavior is
+probably mostly useful if your use of AnalogIn is embedded in a
+function that receives its *channels* parameter from an external
+source.

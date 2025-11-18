@@ -51,18 +51,23 @@ matplotlib:
 Retrieving raw binary data
 --------------------------
 
-On occasion, mostly for debugging purposes, it may be useful to retrieve raw binary data.
+On occasion, e.g., for debugging purposes, it may be useful to retrieve raw binary data.
 
 .. literalinclude :: _static/code/cookbook/recipe_d2raw.py
 
 
-The result is a packed array of bytes (np.uint8) in which the bits
+The result is a packed array of bytes (``np.uint8``) in which the bits
 represent the interleaved data from all of the recorded lines. In this
 case, bits 0, 2, 4, and 6 of each byte derive (in that order) from
 line “di0” whereas bits 1, 3, 5, and 7 derive from line
-“di1”. Plotting that with numpy and matplotlib is a slightly awkward,
-as the above code illustrates.
+“di1”. Plotting that with numpy and matplotlib involves a little
+``np.unpackbits`` magic, as the above code illustrates.
 
 .. image:: _static/imgs/cookbook/recipe_d2raw.png
    :width: 500
    :align: center
+
+Of course you could extract the two lines separately using
+``np.unpackbits(data, bitorder='little').reshape(-1, 2).T``, though at
+that point you might as well call ``di.read(...)`` without the `raw`
+parameter set to ``True``.

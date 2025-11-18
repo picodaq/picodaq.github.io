@@ -38,10 +38,10 @@ Analog input
 Notes
 ~~~~~
 
-1. RMS, measured over 10 Hz to 10 kHz
+1. RMS, measured over 10 Hz to 10 kHz.
 2. For one channel.  Two channels are sampled sequentially, each at
    half the max. rate.
-3. All channels simultaneous
+3. All channels simultaneous.
        
        
 Analog output
@@ -69,8 +69,11 @@ Analog output
      - xxx kHz²⁾
      - xxx kHz³⁾
    * - Noise
-     - xxx mV¹⁾
-     - yyy mV¹⁾
+     - xxx mV⁴⁾
+     - yyy mV⁵⁾
+   * - Max waveform memory
+     - xxx samples⁶)
+     - xxx samples⁶)
 
        
 Notes
@@ -80,7 +83,16 @@ Notes
    outputs. The effective bit depth therefore is reduced at higher
    sampling rates.
 
-       
+2. xxx
+
+3. xxx
+
+4. xxx
+
+5. xxx
+
+6. All channels combined.
+
 Digital input
 -------------
 

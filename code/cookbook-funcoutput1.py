@@ -4,22 +4,24 @@
 # automatically, as cloud services tend not to have picoDAQs
 # attached to their VMs yet.
 
+# These are the square-wave examples 
+
 from picodaq import *
-from picodaq.stimuli import Square, Train
+from picodaq.stimulus import Square, Train
 from picodaq.mockstim import mockstim, mock
 import matplotlib.pyplot as plt
 from code.cookbookhelper import showall
-pulse = Pulse(amplitude=1*V, duration=10*ms)
-train = Train(pulse, trainperiod=20*ms, pulsecount=100)
+pulse = Square(amplitude=1*V, duration=100*ms)
+train = Train(pulse, pulseperiod=200*ms, pulsecount=10)
 
 
 def recipe_fo1a():
     ##importall
-    from picodaq.stimuli import Square, Train
+    from picodaq.stimulus import Square, Train
 
-    pulse = Pulse(amplitude=1*V, duration=10*ms)
-    train = Train(pulse, trainperiod=20*ms, pulsecount=100)
-    with AnalogOut(channel=0, rate=50*kHz) as ao:
+    pulse = Square(amplitude=1*V, duration=100*ms)
+    train = Train(pulse, pulseperiod=200*ms, pulsecount=10)
+    with AnalogOut(rate=50*kHz) as ao:
         ao[0].stimulus(train)
         ao.run()
 
@@ -35,13 +37,13 @@ def recipe_fo1b():
 
     
 def recipe_fo1c():
-    with AnalogOut(channel=0, rate=50*kHz) as ao:
-        with AnalogIn() as ai:
+    with AnalogOut(rate=50*kHz) as ao:
+        with AnalogIn(channel=0) as ai:
             ao[0].stimulus(train)
             ao.run()
             data, times = ai.readall(times=True)
 
-    plt.plot(times, data)
+    plt.plot(times, data, '.-', markersize=1, linewidth=0.1)
     plt.xlabel('Time (s)')
     plt.ylabel('Voltage (V)')
     

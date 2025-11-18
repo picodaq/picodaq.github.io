@@ -1,0 +1,75 @@
+.. _cookbook-funcoutput1:
+
+Using picoDAQ as a function generator
+=====================================
+
+Outputting a continuous square wave
+-----------------------------------
+
+To output a continuous square wave with amplitude 1 V from baseline
+(i.e., 2 V peak-to-peak) with each phase of the wave lasting 100 ms
+(i.e., frequency 5 Hz considering that there are two phases):
+
+.. literalinclude :: _static/code/cookbook/recipe_fo1a.py
+
+This outputs to channel ao0.
+
+To visualize the programmed wave before actually sending it out:
+
+.. literalinclude :: _static/code/cookbook/recipe_fo1b.py
+
+.. image:: _static/imgs/cookbook/recipe_fo1b.png
+   :width: 500
+   :align: center
+
+           
+
+PicoDAQ can simultaneously record, so if you connect a BNC cable
+between ao0 and ai0, we can verify that the output is indeed as
+advertised:
+
+.. literalinclude :: _static/code/cookbook/recipe_fo1c.py
+
+.. image:: _static/imgs/cookbook/recipe_fo1c.png
+   :width: 500
+   :align: center
+
+           
+Outputting a sine wave
+----------------------
+
+Like advanced traditional function generators, PicoDAQ can store
+arbitrary waveforms, and this is the most convenient way to produce
+sine wave output. The first step is to define the sine wave itself:
+
+
+.. literalinclude :: _static/code/cookbook/recipe_fo2a.py
+
+This defines a 5-Hz sine wave for use at 50-kHz
+sampling rate.
+
+After that, we can proceed as before to visualize what the PicoDAQ
+intends to output:
+
+.. literalinclude :: _static/code/cookbook/recipe_fo2b.py
+
+.. image:: _static/imgs/cookbook/recipe_fo2b.png
+   :width: 500
+   :align: center
+
+Note that the final amplitude of the sine wave is defined by the
+`scale` parameter to ``Wave``. As a useful convention, we defined the
+core wave shape abstractly with amplitude 1. That way we can keep
+track of physical units, despite the fact that numpy does not store
+them in its vectors.
+
+Actually sending this wave to the PicoDAQ uses the exact same code as
+for the square wave:
+
+.. literalinclude :: _static/code/cookbook/recipe_fo2c.py
+
+.. image:: _static/imgs/cookbook/recipe_fo2c.png
+   :width: 500
+   :align: center
+
+(As before, we connect a cable between ao0 and ai0 to record the signal.)           

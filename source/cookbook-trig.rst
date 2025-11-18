@@ -6,8 +6,8 @@ Recipes for using triggers
 Using triggers to start a recording
 -----------------------------------
 
-The *trigger* method on AnalogIn and DigitalIn may be used to wait on
-a trigger condition before starting a recording:
+The ``trigger(...)`` method on ``AnalogIn`` and ``DigitalIn`` may be
+used to wait on a trigger condition before starting a recording:
 
 .. literalinclude :: _static/code/cookbook/recipe_trig1a.py
 
@@ -31,7 +31,7 @@ recorded. For instance,
 
 works just fine.
 
-The trigger is edge-sensitive, not level-sensitive meaning that it
+The trigger is edge-sensitive, not level-sensitive, meaning that it
 triggers on a low-to-high transition, not arbitrarily in the middle of
 a “high” stretch of the input.
 
@@ -43,7 +43,7 @@ It is equally possible to trigger on a high-to-low transition:
    :width: 500
    :align: center
 
-For the sake of variety, here I did not record the digital signal, but
+In this case I opted not to record the digital signal, but
 you can tell from the phase of the sine wave that we triggered on the
 falling slope of the digital signal.
 
@@ -60,13 +60,14 @@ condition is met.
 This captures 20 episodes of 19 milliseconds each. Each episode is
 triggered by the rising edge of the TTL signal from the function
 generator. As a consequence, all of the traces lie right on top of
-each other:
+each other, neatly revealing that my old function generator produces
+ugly but consistent sine waves:
 
 .. image:: _static/imgs/cookbook/recipe_trig1c.png
    :width: 500
    :align: center
 
-In the example above, we set *period* to zero, because we were happy
+In the example above, I set *period* to zero, because I was happy
 to start the next episode on the first trigger after completing the
 previous episode. It is also allowed to set *period* to a larger
 value, to implement a “cooldown” period. E.g., ``period=1*s`` would

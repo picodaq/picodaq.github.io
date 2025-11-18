@@ -3,8 +3,8 @@
 First Run
 =========
 
-Before anything else, make sure you have :ref:`installed the picodaq
-library <installation>` and that you can ``import`` it into your Python
+Before anything else, make sure you have `installed the picodaq
+library <installation.html>`_ and that you can ``import`` it into your Python
 session.
 
 
@@ -63,13 +63,13 @@ Next steps
 
 That is it! If you got this far, your device is up and running and you are off to the races. To guide you on your next steps:
 
-* A set of `Cookbook Recipes <cookbook>`_ demonstrates the use of
+* A set of `Cookbook Recipes <cookbook.html>`_ demonstrates the use of
   picoDAQ in different data acquisition scenarios.
 
-* A complete `API Reference <apiref>`_ delves into the full the
+* A complete `API Reference <apiref.html>`_ delves into the full the
   functionality of the ``AnalogIn`` class and its friends.
 
-* The `Hardware Specifications <hwspecs>`_ of the picoDAQ boards
+* The `Hardware Specifications <hwspecs.html>`_ of the picoDAQ boards
   detail the limits of what you can achieve with these devices.
 
 .. _troubleshooting:
@@ -101,8 +101,8 @@ Serial Device (COM3)” should show up under “Ports (COM & LPT)” in the
 from the “Property” pull down, you should see “VID_2E8A&PID_000A”
 among the spaghetti.
 
-If the device shows up in the device tree, but does not work ...
-
-If it does not show up at all...
-
-If it shows up but with different IDs...
+If the device shows up in the device tree, but does not work, try
+uninstalling the driver that attached itself to the device. In Linux
+this may involve editing the system files in ``/etc/udev/rules.d``. In
+Windows, the “Device Manager” allows you to do this directly. Then,
+physically unplug the device and plug it back in.

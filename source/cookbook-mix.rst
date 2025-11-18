@@ -12,9 +12,9 @@ display the results using matplotlib:
 
 .. literalinclude :: _static/code/cookbook/recipe_mix1a.py
 
-Even though you call the *read* functions on the two streams one after
-the other, the data are in fact sampled simultaneously. (The library
-performs the necessary buffering behind the scenes.)
+Even though you call the ``read(...)`` functions on the two streams
+one after the other, the data are in fact sampled simultaneously. (The
+library performs the necessary buffering behind the scenes.)
 
 Note the convention that analog sources connect to “channels” whereas
 digital sources connect to “lines”.
@@ -37,7 +37,7 @@ makes your code a lot easier to read:
    :width: 500
    :align: center
 
-In all cases, sampling starts at the time of the first *read* call to
+In all cases, sampling starts at the time of the first ``read(...)`` call to
 either stream.
 
 
@@ -71,5 +71,5 @@ total throughput of the USB connection. Code like:
             adata = ai.read(200*ms)
             ddata = di.read(200*ms)
 
-works as you would expect. Equally, it is OK to use ``channels`` with
-AnalogIn while using ``line`` with DigitalIn or the converse.
+works as you would expect. Equally, it is OK to use `channels` with
+``AnalogIn`` while using `line` with ``DigitalIn`` or the converse.
