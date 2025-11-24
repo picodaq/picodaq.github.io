@@ -16,12 +16,16 @@ Even though you call the ``read(...)`` functions on the two streams
 one after the other, the data are in fact sampled simultaneously. (The
 library performs the necessary buffering behind the scenes.)
 
-Note the convention that analog sources connect to “channels” whereas
-digital sources connect to “lines”.
-
 .. image:: _static/imgs/cookbook/recipe_mix1a.png
    :width: 500
    :align: center
+
+Note the convention that analog sources connect to “channels” whereas
+digital sources connect to “lines”. Also note that the sampling rate
+for analog and digital must be the same. In fact, as we will see in
+the next example, it is OK to specify the ``rate=...`` parameter only
+in the first stream to be opened and leave it implicit when opening
+the other.
 
            
 Recording more data

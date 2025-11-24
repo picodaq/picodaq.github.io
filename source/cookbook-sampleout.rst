@@ -1,8 +1,8 @@
 .. _cookbook-sampleout:
 
 
-Nonparametric (“sampled”) output
-================================
+Recipes for generating nonparametric (“sampled”) output
+=======================================================
 
 Although parametric output as considered in the previous two sections
 can be very convenient, not all cases are covered. For instance,

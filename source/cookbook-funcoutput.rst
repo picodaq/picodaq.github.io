@@ -1,7 +1,7 @@
 .. _cookbook-funcoutput:
 
-Using picoDAQ as a function generator
-=====================================
+Recipes for using picoDAQ as a function generator
+=================================================
            
 Outputting a sine wave
 ----------------------

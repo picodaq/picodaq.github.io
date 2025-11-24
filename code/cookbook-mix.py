@@ -30,7 +30,7 @@ def recipe_mix1b():
     ddata = []
     K = 10
     with AnalogIn(channel=0, rate=50*kHz) as ai:
-        with DigitalIn(line=0, rate=50*kHz) as di:
+        with DigitalIn(line=0) as di:
             for k in range(K):
                 adata.append(ai.read(50*ms))
                 ddata.append(di.read(50*ms))

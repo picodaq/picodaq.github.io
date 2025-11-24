@@ -36,11 +36,6 @@ Generating output
 * :ref:`Nonparametric output <cookbook-sampleout>`
 * :ref:`Generating multiple outputs synchronously <cookbook-output2>`
 
-Combined input and output
--------------------------
-
-*  Combining input and output cookbook-inout
-*  Discontinuous output? Episodic/triggered in/out combo? 
   
 .. toctree::
    :maxdepth: 2

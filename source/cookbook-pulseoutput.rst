@@ -1,8 +1,8 @@
 .. _cookbook-pulseoutput:
 
 
-Using picoDAQ as a pulse generator
-==================================
+Recipes for using picoDAQ as a pulse generator
+==============================================
 
 Outputting a sequence of pulses
 -------------------------------
@@ -35,6 +35,10 @@ following code while a BNC cable connects ao0 to ai0:
 
 (Note the single-sample overshoots as the hardware attempts to make
 the sharpest possible square waves.)
+
+The sampling rate is only set once on the first stream to be opened
+(i.e., ``AnalogOut`` in the example above). Any secondary streams
+automatically use the same sampling rate.
 
 The act of reading from the input stream (``ai.read(...)``)
 automatically starts the output. Almost the same effect could be
